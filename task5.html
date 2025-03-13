@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form (No CSS)</title>
+</head>
+<body>
+
+    <div style="background-color: #ffffcc; padding: 20px; border: 1px solid #000; display: inline-block;">
+        <h1>Registration Form</h1>
+        <form id="registrationForm">
+            <div style="margin-bottom: 10px;">
+                <label for="name" style="font-weight: bold;">NAME:</label><br>
+                <input type="text" id="name" name="name" placeholder="John" required>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="email" style="font-weight: bold;">EMAIL:</label><br>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="password" style="font-weight: bold;">PASSWORD:</label><br>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" style="background-color: #ff0000; color: white; padding: 5px 10px; border: none; font-weight: bold;">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Password:", password);
+        });
+    </script>
+
+</body>
+</html>
